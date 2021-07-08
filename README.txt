@@ -15,3 +15,6 @@ TUẦN 2: Công cụ và khung giao diện người dùng Web Front-End: Bootstr
 - Bootstrap Blockquote - https://getbootstrap.com/docs/4.0/content/typography/#blockquotes
 
 --- HÌNH ẢNH & PHƯƠNG TIỆN: MỤC TIÊU & KẾT QUẢ --- Images and Media: Objectives and Outcomes --- 
+# Tài nguyên Bootstrap
+- Các lớp hình ảnh Bootstrap - https://getbootstrap.com/docs/4.0/content/images/
+- Các lớp đối tượng phương tiện Bootstrap - https://getbootstrap.com/docs/4.0/layout/media-object/
