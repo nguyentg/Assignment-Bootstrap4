@@ -14,7 +14,22 @@ TUẦN 2: Công cụ và khung giao diện người dùng Web Front-End: Bootstr
 - Thẻ Bootstrap - https://getbootstrap.com/docs/4.0/components/card/
 - Bootstrap Blockquote - https://getbootstrap.com/docs/4.0/content/typography/#blockquotes
 
---- HÌNH ẢNH & PHƯƠNG TIỆN: MỤC TIÊU & KẾT QUẢ --- Images and Media: Objectives and Outcomes --- 
+--- HÌNH ẢNH & PHƯƠNG TIỆN --- Images and Media --- 
 # Tài nguyên Bootstrap
 - Các lớp hình ảnh Bootstrap - https://getbootstrap.com/docs/4.0/content/images/
 - Các lớp đối tượng phương tiện Bootstrap - https://getbootstrap.com/docs/4.0/layout/media-object/
+
+--- CẢNH BÁO NGƯỜI DÙNG ---
+# Tài nguyên Bootstrap
+- Huy hiệu Bootstrap - https://getbootstrap.com/docs/4.0/components/badge/
+- Cảnh báo Bootstrap - https://getbootstrap.com/docs/4.0/components/alerts/
+- Tiến trình Bootstrap - https://getbootstrap.com/docs/4.0/components/progress/
+CODE Cảnh Báo:
+<div class="alert alert-warning alert-dismissible" role="alert">
+<button type="button" class="close" data-dismiss="alert">
+<span>&times;</span>
+</button>
+<strong>Warning:</strong>: Please
+<a href="tel:+85212345678" class="alert-link">
+call</a> us to reserve for more than six guests.
+</div>
