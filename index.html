@@ -39,20 +39,21 @@
          </div>
     </nar>
 
+    <!--Start MessageBox login-->
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Login </h4>
+                    <h4 class="modal-title">Login !</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form>
                         <div class="form-row">
                             <div class="form-group col-sm-4">
-                                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                                    <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
+                                <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
                             </div>
                             <div class="form-group col-sm-4">
                                 <label class="sr-only" for="exampleInputPassword3">Password</label>
@@ -74,7 +75,10 @@
                 </div>
             </div>
         </div>
-    </div>    <header class="jumbotron">
+    </div>   
+    <!--End MessageBox login-->
+ 
+    <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
                 <div class="col-12 col-sm-6">
@@ -85,20 +89,22 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col col-sm align-self-center">
-                    <a href="#Reserve" class="btn btn-warning btnReserveTable " 
-                    data-toggle="tooltip" data-html="true"
-                    title="Or Call us at <br><strong>+0775559999<strong>"
-                    data-placement="bottom"
-                    role="button" aria-pressed="true">Reserve Table</a>
+                    <span class="nabar-text">
+                        <a class="btn btn-warning btnReserveTable" data-toggle="modal" data-target="#Reserve"
+                        role="button" aria-pressed="true">Reserve Table
+                        </a>
+                    </span>
                 </div>
+
+  
             </div>
         </div>
     </header>
 
+    <!--Tạo slide quảng cáo tại đây-->
     <div class="container">
         <div class="row row-content">
             <div class="col">
-
                 <!--Slide quảng cáo-->
                 <div id="mycarousel" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner" role="listbox">
@@ -146,10 +152,21 @@
                     </a>
                     <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
-                    </a>                
+                    </a>   
+                    
+                    <!--Play and Pause-->
+                    <div class="btn-group" id="carouselButton">
+                        <button class="btn btn-danger btn-sm" id="carousel-pause">
+                            <span class="fa fa-pause"></span>
+                        </button>
+                        <button class="btn btn-danger btn-sm" id="carousel-play">
+                            <span class="fa fa-play"></span>
+                        </button>
+                    </div>                        
                 </div>
             </div>
         </div>
+
         <div class="row row-content align-items-center"> 
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
                 <h3>Our Lipsmacking Culinary Creations</h3>
@@ -165,7 +182,6 @@
                 </div>
             </div>
         </div>
-
 
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 col-md-3">
@@ -203,57 +219,81 @@
             </div>
         </div>
 
-        <div id="Reserve" class="row row-content">
-            <div class="col-12 col-md-2"></div>
-            <div class="col-12 col-md-8">
-                <div class="card">
-                    <div class="col col-md card text-white bg-warning mb-3 card-title"><h2>Reserve a Table</h2></div>
-                    <div class="card-body">
-                        <div class="row col col-md">
-                            <form class="col-lg">
-                                <div class="row col-12 col-md-12">
-                                    <div class="col-lg-3">
-                                        <label for="numberGuests">Number of Guests&emsp;&emsp;</label>
-                                    </div>
-                                    <div class="col-lg">
-                                        <input type="radio" id="one" name="fav_language" value="HTML">
-                                        <label for="one">1 &ensp;</label>
-                                        <input type="radio" id="two" name="fav_language" value="CSS">
-                                        <label for="two">2 &ensp;</label>
-                                        <input type="radio" id="three" name="fav_language" value="JavaScript">
-                                        <label for="three">3 &ensp;</label>
-                                        <input type="radio" id="four" name="fav_language" value="HTML">
-                                        <label for="four">4 &ensp;</label>
-                                        <input type="radio" id="five" name="fav_language" value="CSS">
-                                        <label for="five">5 &ensp;</label>
-                                        <input type="radio" id="six" name="fav_language" value="JavaScript">
-                                        <label for="six">6 &ensp;</label>
-                                    </div>
-                                </div>
-                                <div class="row col-12 col-md-12">
-                                    <div class="col-lg-3">
-                                        <label for="datetime">Date and Time</label>
-                                    </div>
-                                    <div class="col-lg">
-                                        <input type="datetime" name="date" value="Date">
-                                        <input type="datetime" name="time" value="Time">  
-                                    </div>                            
-                                </div>  
-                                <div class="row col-12 col-md-12">
-                                    <div class="col-lg-3"><br></div>
-                                    <div class="col-lg">
-                                        <br>
-                                        <button type="submit" class="btn btn-primary">Reserve</button> 
-                                    </div>                                    
-                                </div>   
-                                <br>                    
-                            </form>
-                        </div>                
+
+        <!--Start MessageBox Đặt bàn-->
+        <div id="Reserve" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg" role="content">
+                <!--Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Reserve a Table</h4> <!--messagebox dùng để đặt bàn ở đây-->
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
-                </div>            
+                    <div class="modal-body">
+                        <form class="col-lg">
+                            <div class="row col-12 col-md-12">
+                                <div class="col-lg-3">
+                                    <label for="numberGuests">Number of Guests&emsp;&emsp;</label>
+                                </div>
+                                <div class="col-lg">
+                                    <input type="radio" id="one" name="fav_language" value="HTML">
+                                    <label for="one">1 &ensp;</label>
+                                    <input type="radio" id="two" name="fav_language" value="CSS">
+                                    <label for="two">2 &ensp;</label>
+                                    <input type="radio" id="three" name="fav_language" value="JavaScript">
+                                    <label for="three">3 &ensp;</label>
+                                    <input type="radio" id="four" name="fav_language" value="HTML">
+                                    <label for="four">4 &ensp;</label>
+                                    <input type="radio" id="five" name="fav_language" value="CSS">
+                                    <label for="five">5 &ensp;</label>
+                                    <input type="radio" id="six" name="fav_language" value="JavaScript">
+                                    <label for="six">6 &ensp;</label>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row col-12 col-md-12">
+                                <div class="col-lg-3">
+                                    <label for="datetime">Section</label>
+                                </div>
+                               <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-secondary green">
+                                      <input type="radio" name="options" id="option1" autocomplete="off"> Non-Smoking
+                                    </label>
+                                    <label class="btn btn-secondary red">
+                                      <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
+                                    </label>
+                                </div>                                
+
+                           
+                            </div>
+                            <br> 
+                            <div class="row col-12 col-md-12">
+                                <div class="col-lg-3">
+                                    <label for="datetime">Date and Time</label>
+                                </div>
+                                <div class="col-lg">
+                                    <input type="datetime" name="date" value="Date">
+                                    <input type="datetime" name="time" value="Time">  
+                                </div>                            
+                            </div>  
+                            <br>
+                            <div class="row col-12 col-md-12">
+                                <div class="col-lg-3"><br></div>
+                                <div class="col-lg">
+                                    <br>
+                                    <button type="submit" class="btn btn-secondary">Cancel</button>
+                                    <button type="submit" class="btn btn-primary">Reserve</button> 
+                                </div>                                    
+                            </div>   
+                            <br>                    
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-md"></div>       
-        </div>
+        </div>   
+        <!--End MessageBox Đặt bàn-->
+
+
     </div>
 
     <footer class="footer">
@@ -304,8 +344,14 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $('[data-toggle="tooltip"]').tooltip();
+        $(document).ready(function(){
+            $("#mycarousel").carousel( { interval: 2000 } );
+            $("#carousel-pause").click(function(){
+                $("#mycarousel").carousel('pause');
+            });
+            $("#carousel-play").click(function(){
+                $("#mycarousel").carousel('cycle');
+            });
         });
     </script>
 </body>
