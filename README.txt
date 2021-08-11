@@ -33,3 +33,13 @@ CODE Cảnh Báo:
 <a href="tel:+85212345678" class="alert-link">
 call</a> us to reserve for more than six guests.
 </div>
+
+===================================
+Tuần 4: Bộ tiền xử lí Css
+# Tài nguyên Less và Sass 
+- Bắt đầu Less - https://lesscss.org/
+- Kiến thức cơ bản về Sass - https://sass-lang.com/guide
+- Bắt đầu với Less hướng dẫn - https://scotch.io/tutorials/getting-started-with-less
+- Bắt đầu với Hướng dẫn Sass - https://scotch.io/tutorials/getting-started-with-sass
+- Gói NPM Less - https://www.npmjs.com/package/less
+- Gói NPM Node-sass - https://www.npmjs.com/package/node-sass
